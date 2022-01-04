@@ -9,12 +9,16 @@ let package = Package(
     dependencies: [
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"), // ORM（Object Relational Mapping）框架采用元数据来描述对象与关系映射
+        .package(url: "https://github.com/tomlee130/contentful.git", from: "5.5.5"),
     ],
     targets: [
         .target(
             name: "App",
             dependencies: [
-                .product(name: "Vapor", package: "vapor")
+                .product(name: "Fluent", package: "fluent"),
+                .product(name: "Vapor", package: "vapor"),
+                .product(name: "Contentful", package: "Contentful")
             ],
             swiftSettings: [
                 // Enable better optimizations when building in Release configuration. Despite the use of
