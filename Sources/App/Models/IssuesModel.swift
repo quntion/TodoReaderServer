@@ -16,7 +16,7 @@ final class IssuesModel: Model, Content {
     static let schema = "issues_schema"
     
     @Field(key: "id")
-    var id: String?
+    var id: Int?
     
     @Field(key: "title")
     var title: String
@@ -39,8 +39,8 @@ final class IssuesModel: Model, Content {
     @Field(key: "attachment")
     var attachment: [String]
     
-    init(id: String? = nil, title: String?, date: String?, description: String?, images: [String]?, resolved: Bool?, reference: [String]?, attachment: [String]?) {
-        self.id = id ?? ""
+    init(id: Int? = nil, title: String?, date: String?, description: String?, images: [String]?, resolved: Bool?, reference: [String]?, attachment: [String]?) {
+        self.id = id ?? 0
         self.title = title ?? ""
         self.date = date ?? ""
         self.description = description ?? ""

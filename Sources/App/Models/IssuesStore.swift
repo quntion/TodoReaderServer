@@ -17,7 +17,7 @@ class IssuesStore {
         getArray(id: "problem") { items in
             items.forEach { (item) in
                 self.issuesList.append(
-                    IssuesModel(id: item.fields["id"] as? String,
+                    IssuesModel(id: item.fields["id"] as? Int,
                                 title: item.fields["title"] as? String,
                                 date: item.fields["date"] as? String,
                                 description: item.fields["description"] as? String,
