@@ -1,3 +1,6 @@
+## 项目介绍：
+    通过研究swift-vapor实例深入了解Swift语言及延伸，开发一款基于Vapor为服务端、基于SwiftUI为客户端的Swift双端应用。
+
 1.开发环境
 
 ​    macOS 12+
